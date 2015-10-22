@@ -21,7 +21,7 @@
  *
  * @author      Josh Lockhart <info@slimframework.com>
  * @copyright   2012 Josh Lockhart
- * @version     0.1.0
+ * @version     0.1.1
  *
  * MIT LICENSE
  *
@@ -51,7 +51,7 @@ class DateTimeFileWriter
     /**
      * @const string
      */
-    const VERSION = '0.1.0';
+    const VERSION = '0.1.1';
 
     /**
      * @var resource
