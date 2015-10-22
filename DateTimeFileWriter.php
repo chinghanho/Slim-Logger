@@ -72,10 +72,10 @@ class DateTimeFileWriter
      * (string) The relative or absolute filesystem path to a writable directory.
      *
      * name_format:
-     * (string) The log file name format; parsed with `date()`.
+     * (string) The log file name format.
      *
      * extension:
-     * (string) The file extention to append to the filename`.     
+     * (string) The file extention to append to the filename`.
      *
      * message_format:
      * (string) The log message format; available tokens are...
@@ -91,7 +91,7 @@ class DateTimeFileWriter
         //Merge user settings
         $this->settings = array_merge(array(
             'path' => './logs',
-            'name_format' => 'Y-m-d',
+            'name_format' => 'debug',
             'extension' => 'log',
             'message_format' => '%label% - %date% - %message%'
         ), $settings);
@@ -139,7 +139,7 @@ class DateTimeFileWriter
 
         //Open resource handle to log file
         if (!$this->resource) {
-            $filename = date($this->settings['name_format']);
+            $filename = $this->settings['name_format'];
             if (! empty($this->settings['extension'])) {
                 $filename .= '.' . $this->settings['extension'];
             }
